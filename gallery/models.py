@@ -8,7 +8,7 @@ class Image(models.Model):
     location = models.ForeignKey('Location', on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
     def save_image(self):
