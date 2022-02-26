@@ -14,11 +14,44 @@
                 <div class="col-lg-4 col-md-12 mb-4">
 
                     <img src="media/{{image.gallery_image}}" class="img-fluid mb-4"
-                        alt="">
+                        alt="" onclick="showModal('{{image.description}}','{{image.location}}','{{image.name}}','{{image.category}}', 'media/{{image.gallery_image}}')">
 
                 </div>
 
             </div>
         {% endfor %}
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" id="modalimage" class="img-fluid" alt="">
+                        <p id="description"></p>
+                        <p id="location"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
+
+<script>
+
+    function showModal(description, location, name, category, gallery_image) {
+        $('#exampleModalLabel').text(name)
+        $('#modalimage').attr('src', gallery_image)
+        $('#description').text(`Description: ${description}`)
+        $('#location').text(`Location: ${location}`)
+        $('#exampleModal').modal('show');
+    }   
+
+</script>
+
 {% endblock %}
