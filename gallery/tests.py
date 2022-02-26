@@ -21,3 +21,18 @@ class ImageTestClass(TestCase):
         self.image1.save_image()
         images = Image.objects.all()
         self.assertTrue(len(images) > 0)
+
+class LocationTestClass(TestCase):
+    def setUp(self):
+        self.location1 = Location(location_name = "Africa")
+
+    def test_save_method(self):
+        self.location1.save_location()
+
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.category1 = Category(category_name = 'Art')
+
+    def test_save_method(self):
+        self.category1.save_category()
+  
