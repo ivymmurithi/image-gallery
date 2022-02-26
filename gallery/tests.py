@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.test import TestCase
 from .models import Image,Category,Location
 # from django.core.files.uploadedfile import SimpleUploadedFile
@@ -7,9 +8,16 @@ from .models import Image,Category,Location
 class ImageTestClass(TestCase):
 
     def setUp(self):
-        # self.location1 =Location(location_name = "Africa")
-        # self.category1 = Category(category_name = 'Art')
-        self.image1 = Image(name = "ivy's photo",description = "A photo of Ivy")
+        self.location1 = Location(location_name = "Africa")
+        self.location1.save_location()
+        self.category1 = Category(category_name = 'Art')
+        self.category1.save_category()
+        self.image1 = Image(name = "ivy's photo",description = "A photo of Ivy", location = self.location1, category = self.category1)
 
     def test_instance(self):
         self.assertTrue(isinstance(self.image1,Image))
+
+    def test_save_method(self):
+        self.image1.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0)
