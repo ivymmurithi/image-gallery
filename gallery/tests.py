@@ -35,4 +35,9 @@ class CategoryTestClass(TestCase):
 
     def test_save_method(self):
         self.category1.save_category()
+
+    def tearDown(self):
+        Image.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
   
