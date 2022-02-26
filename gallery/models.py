@@ -15,6 +15,9 @@ class Image(models.Model):
     def save_image(self):
         self.save()
 
+    def delete_image(self):
+        self.delete()
+
 class Location(models.Model):
     location_name = models.CharField(max_length=30)
 
@@ -24,6 +27,9 @@ class Location(models.Model):
     def save_location(self):
         self.save()
 
+    def delete_location(self):
+        self.delete()
+
 class Category(models.Model):
     category_name = models.CharField(max_length=30)
 
@@ -32,3 +38,6 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+
+    def delete_category(self):
+        self.delete()

@@ -21,6 +21,12 @@ class ImageTestClass(TestCase):
         images = Image.objects.all()
         self.assertTrue(len(images) > 0)
 
+    def test_delete_method(self):
+        self.image1.save_image()
+        self.image1.delete_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) - 1)
+
 class LocationTestClass(TestCase):
     def setUp(self):
         self.location1 = Location(location_name = "Africa")
@@ -28,12 +34,24 @@ class LocationTestClass(TestCase):
     def test_save_method(self):
         self.location1.save_location()
 
+    def test_delete_method(self):
+        self.location1.save_location()
+        self.location1.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) - 1)
+
 class CategoryTestClass(TestCase):
     def setUp(self):
         self.category1 = Category(category_name = 'Art')
 
     def test_save_method(self):
         self.category1.save_category()
+
+    def test_delete_method(self):
+        self.category1.save_category()
+        self.category1.delete_category()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) - 1)
 
     def tearDown(self):
         """
