@@ -33,6 +33,7 @@
                         <img src="" id="modalimage" class="img-fluid" alt="">
                         <p id="description"></p>
                         <p id="location"></p>
+                        <p id="category"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -47,8 +48,9 @@
     function showModal(description, location, name, category, gallery_image) {
         $('#exampleModalLabel').text(name)
         $('#modalimage').attr('src', gallery_image)
-        $('#description').text(`Description: ${description}`)
-        $('#location').text(`Location: ${location}`)
+        $('#description').html(`<strong>Description:</strong> ${description}`)
+        $('#location').html(`<strong>Location:</strong> ${location}`)
+        $('#category').html(`<strong>Category:</strong> ${category}`)
         $('#exampleModal').modal('show');
     }   
 

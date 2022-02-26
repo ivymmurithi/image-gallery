@@ -1,3 +1,15 @@
 .modal-content {
-  border: 7px solid #ffc107 !important; 
+  border: 7px solid #fca311 !important; 
+}
+
+.btn {
+    background-color: #fca311 !important;
+}
+
+#exampleModalLabel {
+    font-family: 'Gideon Roman', cursive !important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
 }
