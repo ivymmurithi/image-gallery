@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>Hello Django</h1>
+<div class="container my-4">
+
+        {% for image in images %}
+
+            <hr class="mb-5" />
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <img src="media/{{image.gallery_image}}" class="img-fluid mb-4"
+                        alt="">
+
+                </div>
+
+            </div>
+        {% endfor %}
+</div>
 {% endblock %}
