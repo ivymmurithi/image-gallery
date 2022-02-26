@@ -31,6 +31,9 @@ class LocationTestClass(TestCase):
     def setUp(self):
         self.location1 = Location(location_name = "Africa")
 
+    def test_instance(self):
+        self.assertTrue(isinstance(self.location1,Location))
+
     def test_save_method(self):
         self.location1.save_location()
 
@@ -43,6 +46,9 @@ class LocationTestClass(TestCase):
 class CategoryTestClass(TestCase):
     def setUp(self):
         self.category1 = Category(category_name = 'Art')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.category1,Category))
 
     def test_save_method(self):
         self.category1.save_category()
