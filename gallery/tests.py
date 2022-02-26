@@ -1,8 +1,7 @@
 from unicodedata import category
 from django.test import TestCase
 from .models import Image,Category,Location
-# from django.core.files.uploadedfile import SimpleUploadedFile
-# import tempfile
+
 
 # Create your tests here.
 class ImageTestClass(TestCase):
@@ -37,6 +36,10 @@ class CategoryTestClass(TestCase):
         self.category1.save_category()
 
     def tearDown(self):
+        """
+        Tear down method for deleting all instances of the models
+        from the database after each test
+        """
         Image.objects.all().delete()
         Location.objects.all().delete()
         Category.objects.all().delete()
