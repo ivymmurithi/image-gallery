@@ -6,7 +6,14 @@ from .models import Image
 def hello(request):
     if request.method == 'POST':
         if 'results'in request.POST and request.POST.get("results"):
+            """
+            Get user input
+            """
             search_query = request.POST['results']
+
+            """
+            Enable Search for both category and location
+            """
             filter_category = {
                 "category__category_name__icontains": search_query, 
             }

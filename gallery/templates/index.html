@@ -50,6 +50,7 @@
 
 <script>
 
+// Add Database data into modal popup
     function showModal(description, location, name, category, gallery_image) {
         $('#exampleModalLabel').text(name)
         $('#modalimage').attr('src', gallery_image)
@@ -59,6 +60,7 @@
         $('#exampleModal').modal('show');
     } 
 
+    // Copy functionality on click
     function copy_url(element) {
         var getUrl = window.location;
         var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
