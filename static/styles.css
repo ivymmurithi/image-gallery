@@ -13,3 +13,16 @@
 body {
     font-family: 'Poppins', sans-serif !important;
 }
+
+.gifs {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 200%;
+  margin:0 auto;
+  margin-top: 5%;
+}
+
+.gif img {
+  max-width: 200%;
+  cursor: pointer;
+}
