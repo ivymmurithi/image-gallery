@@ -9,13 +9,15 @@ This is a website that displays images and allows users to search photos based o
 1. Click on the image to view the image name, description, location and category via a modal.
 2. To copy url, click on the copy image url button and paste it to whichever place you wish.
 3. Search terms available include:
-  *Categories
+
+  **Categories**
       - Food
       - Art
       - Culture
       - Wildlife
       -Cat
-   *Locations
+    
+   **Locations**
       - Africa
       - South America
       - Asia
