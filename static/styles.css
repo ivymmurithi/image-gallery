@@ -1,28 +1,37 @@
 .modal-content {
-  border: 7px solid #fca311 !important; 
+  border: 7px solid #fca311 !important;
 }
 
 .btn {
-    background-color: #fca311 !important;
+  background-color: #fca311 !important;
 }
 
 #exampleModalLabel {
-    font-family: 'Gideon Roman', cursive !important;
+  font-family: "Gideon Roman", cursive !important;
 }
 
 body {
-    font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .gifs {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   width: 200%;
-  margin:0 auto;
+  margin: 0 auto;
   margin-top: 5%;
 }
 
 .gif img {
   max-width: 200%;
   cursor: pointer;
+}
+
+.inputform {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
 }

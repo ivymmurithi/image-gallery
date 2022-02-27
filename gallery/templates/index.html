@@ -5,7 +5,7 @@
 
 <form action="{% url 'hello' %}" method="POST">
     {% csrf_token %}
-    <input class="form-control form-control-lg" name="results" type="text" placeholder="Search here ... eg: Food, Art, Cat, Africa, Europe, Travel, Asia, Middle-East"
+    <input class="form-control inputform form-control-lg" name="results" type="text" placeholder="Search here ... eg: Food, Art, Cat, Africa, Europe, Travel, Asia, Middle-East"
         aria-label=".form-control-lg example">
 </form>
 
@@ -20,7 +20,6 @@
         {% endif %}
 
         {% for image in images %}
-                <!--Grid column-->
                 <div class="row gif">
                     <img src="media/{{image.gallery_image}}" id="image-url" class="img-fluid col mb-4"
                         alt="" onclick="showModal('{{image.description}}','{{image.location}}','{{image.name}}','{{image.category}}', 'media/{{image.gallery_image}}')">
