@@ -1,7 +1,4 @@
-from email import message
-from unicodedata import category
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Image
 
 # Create your views here.
