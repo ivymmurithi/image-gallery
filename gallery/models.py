@@ -1,4 +1,5 @@
 from django.db import models
+import pyperclip
 
 # Create your models here.
 class Image(models.Model):
