@@ -1,6 +1,7 @@
 from email import message
 from django.shortcuts import render
 from .models import Image
+from django.contrib import messages
 
 # Create your views here.
 def hello(request):
@@ -24,7 +25,7 @@ def hello(request):
             if len(image_object) < 1:
                 image_object = Image.objects.filter(**filter_category)
             if len(image_object) == 0:
-                message('Search term does not exist')
+                messages.error(request, "The search term does not exist")
     else:
         image_object = Image.objects.all()
-    return render(request, 'index.html', {"images":image_object})
+    return render (request, 'index.html', {"images":image_object})
